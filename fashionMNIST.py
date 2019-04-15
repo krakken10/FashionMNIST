@@ -72,7 +72,7 @@ model.add(Dropout(0.25))
 model.add(Flatten())
 model.add(Dense(256, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(10, activation='softmax'))
+model.add(Dense(num_classes, activation='softmax'))
 
 model.compile(
   loss='categorical_crossentropy',
@@ -81,7 +81,6 @@ model.compile(
 )
 
 History = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=EPOCHS, batch_size=BATCH_SIZE)
-print("Returned:", History)
 
 print(History.history.keys())
 
