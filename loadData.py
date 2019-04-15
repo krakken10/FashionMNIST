@@ -1,5 +1,4 @@
 import numpy as np
-from PIL import Image
 
 class LoadData:
     def __init__(self, image_size):
